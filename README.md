@@ -1,12 +1,34 @@
-# Agent 生态观察站
+# DSH 生态观察站
 
-面向个人开发者的持续调研项目：观察 DSH 开源生态与商业 Agent 产品，把公开元数据、厂商声明、研究假设和实测结果分开记录。
+[![DSH Ecosystem](https://img.shields.io/badge/DSH-Ecosystem-146450)](https://github.com/deepseek-ai/deepseek-harness)
+[![Website](https://img.shields.io/badge/Website-GitHub%20Pages-2088ff)](https://ysyyhhh.github.io/agent-ecosystem-observatory/)
+[![Deploy](https://github.com/ysyyhhh/agent-ecosystem-observatory/actions/workflows/pages.yml/badge.svg)](https://github.com/ysyyhhh/agent-ecosystem-observatory/actions/workflows/pages.yml)
+[![Stars](https://img.shields.io/github/stars/ysyyhhh/agent-ecosystem-observatory?style=flat)](https://github.com/ysyyhhh/agent-ecosystem-observatory/stargazers)
+[![License](https://img.shields.io/github/license/ysyyhhh/agent-ecosystem-observatory)](LICENSE)
 
-网站：https://ysyyhhh.github.io/agent-ecosystem-observatory/
+**专注 DeepSeek Harness（DSH）生态的开源研究项目：追踪 DSH 变化，拆解相关开源与闭源产品，寻找有依据的产品机会。**
+
+[访问网站](https://ysyyhhh.github.io/agent-ecosystem-observatory/) · [产品拆解](https://ysyyhhh.github.io/agent-ecosystem-observatory/#products) · [全局 Log](https://ysyyhhh.github.io/agent-ecosystem-observatory/#log) · [应用榜](https://ysyyhhh.github.io/agent-ecosystem-observatory/#rankings) · [提交产品 / 线索](https://github.com/ysyyhhh/agent-ecosystem-observatory/issues/new?template=research.md)
+
+An open-source observatory dedicated to the DeepSeek Harness ecosystem: track DSH changes, map open- and closed-source product capabilities to DSH, and investigate product opportunities with references.
+
+## 项目定位
+
+DSH 是持续研究的中心。收录范围包括基于 DSH 的应用与插件，以及能为 DSH 提供能力对照、集成方向或产品启发的开源、闭源产品。引用某个闭源产品并不表示它采用 DSH。
+
+本站公开代码与研究数据，将来源事实、作者声明、分析推断和实测结果分开记录。它是独立的生态观察网站，目前不是可安装的 DSH 插件。
+
+## DSH 生态入口
+
+- [DeepSeek Harness 官方仓库](https://github.com/deepseek-ai/deepseek-harness)
+- [DSH 官方文档](https://deepseek-harness.github.io/deepseek-harness/)
+- [DSH Releases](https://github.com/deepseek-ai/deepseek-harness/releases) · [社区 Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions)
+- [GitHub：deepseek-harness](https://github.com/topics/deepseek-harness) · [GitHub：dsh-plugin](https://github.com/topics/dsh-plugin)
+- [DSH 社区插件目录](https://awesome-dsh-plugin.com/)
 
 ## 为什么独立建仓库
 
-这份项目的产物是有证据的研究快照与静态网站。无需运行 DSH 或插件，也不依赖 GPU。DSH 是首个观察对象，可逐步扩展更多生态。
+这份项目的产物是围绕 DSH 的研究快照与静态网站。浏览和基础采集无需运行 DSH 或插件，也不依赖 GPU；其他产品作为 DSH 生态的对照与机会线索收录。
 
 网站以洞察为首页，提供四个入口：
 
@@ -75,3 +97,9 @@ git push origin main
 ## 验证
 
 `python -m unittest discover -s tests` 检查采集失败保留、仓库去重与来源引用完整性。可选浏览器测试 `node tests/browser.cjs` 需要 Playwright（可通过 NODE_PATH 指向已有安装），`SITE_URL` 默认 `http://127.0.0.1:8086`，`BROWSER_PATH` 可指向本地 Chrome / Edge。测试覆盖导航、Idea / 产品详情、跨层跳转、Log 筛选、排行排序、移动布局和外部文本转义。
+
+## 项目统计
+
+[Star History](https://www.star-history.com/#ysyyhhh/agent-ecosystem-observatory&Date) · [贡献者](https://github.com/ysyyhhh/agent-ecosystem-observatory/graphs/contributors) · [提交活动](https://github.com/ysyyhhh/agent-ecosystem-observatory/activity) · [Fork 网络](https://github.com/ysyyhhh/agent-ecosystem-observatory/network/members)
+
+Star 和提交活动只反映项目关注与维护情况，不作为 DSH 能力或产品质量评分。
