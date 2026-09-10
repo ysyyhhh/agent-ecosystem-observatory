@@ -1,0 +1,41 @@
+// Optional browser checks: install Playwright or set NODE_PATH to its package directory.
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({headless:true,...(process.env.BROWSER_PATH?{executablePath:process.env.BROWSER_PATH}:{})});
+ const page=await browser.newPage({viewport:{width:1440,height:1100}}), errors=[];
+ page.on('pageerror',e=>errors.push(String(e)));
+ const url=process.env.SITE_URL||'http://127.0.0.1:8086';
+ await page.goto(url);await page.locator('.idea').first().waitFor();
+ assert.equal(await page.locator('.idea').count(),3);
+ assert.equal(await page.locator('.layer').count(),6);
+ fs.mkdirSync('.local',{recursive:true});
+ await page.screenshot({path:'.local/overview-v2.png',fullPage:true});
+ await page.locator('[data-idea="compat"]').click();await page.locator('dialog[open]').waitFor();
+ assert.match(await page.locator('#detail-body').textContent(),/反方与风险/);
+ await page.keyboard.press('Escape');assert.equal(await page.locator('dialog[open]').count(),0);
+ await page.locator('nav a[href="#products"]').click();assert.equal(await page.locator('.product').count(),8);
+ await page.locator('[data-product="tapnow"]').first().click();await page.locator('dialog[open]').waitFor();
+ assert.equal(await page.locator('.mapping-row').count(),3);
+ assert.ok(await page.locator('#detail-body a[href*="github.com"]').count()>0);
+ await page.screenshot({path:'.local/mapping-v2.png',fullPage:true});
+ await page.locator('#close-detail').click();await page.locator('#product-filters [data-value="community"]').click();assert.equal(await page.locator('.product').count(),4);
+ await page.locator('#product-layer').selectOption('tools');assert.equal(await page.locator('.product').count(),0);
+ await page.locator('nav a[href="#overview"]').click();await page.locator('.layer[data-layer="creative"]').click();
+ await page.locator('[data-filter-layer="creative"]').click();assert.match(page.url(),/#products$/);assert.ok(await page.locator('.product').count()>0);
+ await page.locator('nav a[href="#log"]').click();await page.locator('#log-filters [data-value="产品"]').click();assert.equal(await page.locator('.log-event').count(),3);
+ await page.locator('#log-filters [data-value="media"]').click();assert.equal(await page.locator('.log-event').count(),4);assert.match(await page.locator('#log-list').textContent(),/403/);
+ await page.locator('#log-layer').selectOption('creative');assert.equal(await page.locator('.log-event').count(),0);
+ await page.locator('nav a[href="#rankings"]').click();assert.equal(await page.locator('.rank-row').count(),4);
+ const vals=await page.locator('.rank-value').allTextContents();const numbers=vals.map(x=>Number(x.replace('GitHub Stars','').replaceAll(',','').trim()));assert.deepEqual(numbers,[...numbers].sort((a,b)=>b-a));
+ await page.locator('#rank-filters [data-value="updated"]').click();assert.match(await page.locator('.rank-value').first().textContent(),/最近推送/);
+ await page.getByText('查找其余社区仓库',{exact:true}).click();await page.locator('#search').fill('zzzz-no-match');assert.equal(await page.locator('.repo').count(),0);
+ await page.locator('nav a[href="#overview"]').click();await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.screenshot({path:'.local/mobile-v2.png',fullPage:false});
+ await page.emulateMedia({colorScheme:'dark'});await page.screenshot({path:'.local/dark-v2.png',fullPage:false});
+ // Remote metadata is escaped before insertion; an untrusted name must remain text.
+ const remote=await (await page.request.get(url+'/data.json')).json();remote.intelligence.products[0].name='<img src=x onerror=alert(1)>';
+ await page.route('**/data.json',route=>route.fulfill({json:remote}));await page.reload();await page.locator('.idea').first().waitFor();assert.equal(await page.locator('#product-grid img').count(),0);
+ assert.deepEqual(errors,[]);await browser.close();console.log('PASS: ideas, mappings, cross-links, filters, source links, ranking order, mobile, escaping');
+})().catch(e=>{console.error(e);process.exit(1)});

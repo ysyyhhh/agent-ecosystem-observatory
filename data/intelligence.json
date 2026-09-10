@@ -1,0 +1,814 @@
+{
+  "reviewed_at": "2026-09-10",
+  "headline": "底座在补齐，机会要落到具体交付。",
+  "thesis": "优先验证插件兼容、镜头检索和证据更新。已有模块只能证明有候选实现，不能直接证明整条工作流成熟。",
+  "sources": [
+    {
+      "id": "dsh-release",
+      "title": "DSH v0.1.5-rc.1",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-rc.1",
+      "type": "官方发布",
+      "published_at": "2026-09-10",
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dsh-api",
+      "title": "DSH v0.1.5-alpha.1",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-alpha.1",
+      "type": "官方发布",
+      "published_at": "2026-09-08",
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dsh-mcp",
+      "title": "DSH MCP 模块",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/mcp",
+      "type": "官方代码",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dsh-flow",
+      "title": "DSH Workflow 模块",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/workflow",
+      "type": "官方代码",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dsh-jobs",
+      "title": "DSH Jobs 模块",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/jobs",
+      "type": "官方代码",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dsh-files",
+      "title": "DSH 文件模块",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/fs",
+      "type": "官方代码",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dsh-guard",
+      "title": "DSH Guard 模块",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/guard",
+      "type": "官方代码",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "video",
+      "title": "DSH Video Studio",
+      "url": "https://github.com/jonah791/dsh-video-studio",
+      "type": "作者文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "folders",
+      "title": "DSH Metafolder",
+      "url": "https://github.com/ManoloRemiddi/DSH-Metafolder-Plugin",
+      "type": "作者文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "design",
+      "title": "Open Design",
+      "url": "https://github.com/nexu-io/open-design",
+      "type": "作者文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "flowix",
+      "title": "Flowix",
+      "url": "https://github.com/text2future/flowix",
+      "type": "作者文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "memory",
+      "title": "Meow Memory",
+      "url": "https://github.com/Phant0Meow/dsh-meow-memory",
+      "type": "作者文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "automation",
+      "title": "DSH Automation",
+      "url": "https://github.com/MichengAI/dsh-automation",
+      "type": "作者文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "tapnow",
+      "title": "TapNow 更新日志",
+      "url": "https://docs.tapnow.ai/zh/docs/changelog",
+      "type": "官方发布",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dify",
+      "title": "Dify New Agent",
+      "url": "https://dify.ai/blog/introducing-new-dify-agent",
+      "type": "官方发布",
+      "published_at": "2026-08-27",
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "dify-flow",
+      "title": "Dify Workflow Studio",
+      "url": "https://www.dify.ai/workflows",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "tana",
+      "title": "Tana Meetings",
+      "url": "https://tana.inc/help/meetings",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "readwise",
+      "title": "Readwise MCP 与 CLI",
+      "url": "https://docs.readwise.io/tools",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "reddit-launch",
+      "title": "Reddit 转引 DSH 发布帖",
+      "url": "https://www.reddit.com/r/accelerate/comments/1vnbzvc/deepseek_harness_v01_is_now_available_in/",
+      "type": "社区转述",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "x-launch",
+      "title": "DeepSeek X 发布原帖",
+      "url": "https://x.com/deepseek_ai/status/2087887408440164663",
+      "type": "X 原帖不可读",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "403；通过 Reddit 发现原帖，未独立核验"
+    },
+    {
+      "id": "reddit-friction",
+      "title": "Reddit：插件化的实际使用体验",
+      "url": "https://www.reddit.com/r/DeepSeek/comments/1vthl6g/deepseek_harness_the_everything_is_a_plugin_pitch/",
+      "type": "用户反馈",
+      "published_at": null,
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    },
+    {
+      "id": "paper",
+      "title": "DSH 间接提示注入评估",
+      "url": "https://arxiv.org/abs/2608.16393v2",
+      "type": "研究论文",
+      "published_at": "2026-08-18",
+      "checked_at": "2026-09-10",
+      "access": "已阅读公开来源"
+    }
+  ],
+  "layers": [
+    {
+      "id": "runtime",
+      "name": "执行底座",
+      "state": "官方已有",
+      "description": "模型、Agent、文件与后台任务已有接口。",
+      "gap": "版本迁移和跨插件兼容还需按版本验证；存在接口不等于成熟度已证实。",
+      "opportunity": "可优先复用底层，把开发投入放到任务交付和兼容验证。",
+      "sources": [
+        "dsh-release",
+        "dsh-api",
+        "dsh-jobs"
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "工具与连接",
+      "state": "官方 + 社区",
+      "description": "MCP 提供外部工具接入，社区补充自动化。",
+      "gap": "连接完成后的字段映射、授权状态和错误恢复需逐个工作流验证。",
+      "opportunity": "围绕一种真实业务，把接入、审批、回写做成可复用交付包。",
+      "sources": [
+        "dsh-mcp",
+        "automation",
+        "readwise"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "name": "知识与记忆",
+      "state": "社区已有",
+      "description": "Flowix 与记忆插件已覆盖部分知识场景。",
+      "gap": "未验证引用准确率、来源更新后的失效处理与跨项目隔离。",
+      "opportunity": "证据可回溯的垂直研究助手，比再做一个通用记忆库更值得试验。",
+      "sources": [
+        "flowix",
+        "memory",
+        "readwise"
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "创作与素材",
+      "state": "部分对应",
+      "description": "已有视频工具、设计应用与目录组织插件。",
+      "gap": "当前样本未验证按语义检索镜头、素材血缘和可靠的剪辑交接。",
+      "opportunity": "先验证“从一批素材中选出合适镜头”，不要假设生成和文件整理仍为空白。",
+      "sources": [
+        "video",
+        "folders",
+        "design",
+        "tapnow"
+      ]
+    },
+    {
+      "id": "delivery",
+      "name": "工作流交付",
+      "state": "需集成验证",
+      "description": "DSH 可编排任务，商业产品强调一体化交付。",
+      "gap": "可视化调试、人工确认、版本恢复和面向业务的验收需要组合与实测。",
+      "opportunity": "对一个明确工作流给出可检查结果、失败原因与恢复路径。",
+      "sources": [
+        "dsh-flow",
+        "dify-flow",
+        "tana"
+      ]
+    },
+    {
+      "id": "quality",
+      "name": "质量与验收",
+      "state": "待系统验证",
+      "description": "已有 Guard、研究评估和部分视频质检。",
+      "gap": "当前站点没有跨版本、跨插件、同任务的可比测试结果。",
+      "opportunity": "做面向插件作者的兼容回归与任务验收服务；付费需求尚待验证。",
+      "sources": [
+        "dsh-guard",
+        "paper",
+        "video"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "tapnow",
+      "name": "TapNow",
+      "kind": "商业产品",
+      "category": "创作",
+      "pitch": "用 Agent 和画布组织多媒体创作。",
+      "source": "tapnow",
+      "repo": null,
+      "mappings": [
+        {
+          "task": "本地素材整理",
+          "layer": "creative",
+          "providers": [
+            "dsh-files",
+            "folders"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "目录组织不等于 TapNow 的授权、审批和回滚体验。"
+        },
+        {
+          "task": "视频生成与交付",
+          "layer": "creative",
+          "providers": [
+            "video",
+            "dsh-jobs"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "Video Studio 依赖外部本地资产；安装即用和模型覆盖未验证。"
+        },
+        {
+          "task": "画布与创作交互",
+          "layer": "delivery",
+          "providers": [
+            "design"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "Open Design 是相关候选，不代表节点画布或视频时间线等价。"
+        }
+      ]
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "kind": "商业 / 源码可用",
+      "category": "工作流",
+      "pitch": "把 Agent、知识和业务流程作为可复用应用。",
+      "source": "dify",
+      "repo": null,
+      "mappings": [
+        {
+          "task": "工具与模型编排",
+          "layer": "runtime",
+          "providers": [
+            "dsh-flow",
+            "dsh-mcp"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "DSH 接口与 Dify 节点配置不是同一协议。"
+        },
+        {
+          "task": "可复用 Agent",
+          "layer": "delivery",
+          "providers": [
+            "dsh-flow"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "生命周期、发布与版本控制要另做对接。"
+        },
+        {
+          "task": "可视化业务验收",
+          "layer": "quality",
+          "providers": [
+            "dsh-guard"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "Guard 不等同于业务审批界面、观测和团队治理。"
+        }
+      ]
+    },
+    {
+      "id": "tana",
+      "name": "Tana",
+      "kind": "商业产品",
+      "category": "办公",
+      "pitch": "把会议内容转成结构化结果和后续行动。",
+      "source": "tana",
+      "repo": null,
+      "mappings": [
+        {
+          "task": "会议内容接入",
+          "layer": "tools",
+          "providers": [
+            "dsh-mcp"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "MCP 只提供接入机制；会议采集、转写与权限未验证。"
+        },
+        {
+          "task": "摘要与长期上下文",
+          "layer": "knowledge",
+          "providers": [
+            "memory",
+            "flowix"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "需要说话人、原文引用与跨会话准确性测试。"
+        },
+        {
+          "task": "会后行动交付",
+          "layer": "delivery",
+          "providers": [
+            "dsh-flow",
+            "automation"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "待接入具体任务系统，确认回写、去重和失败恢复。"
+        }
+      ]
+    },
+    {
+      "id": "readwise",
+      "name": "Readwise Reader",
+      "kind": "商业产品",
+      "category": "知识",
+      "pitch": "通过官方 MCP / CLI 将阅读资料交给 Agent。",
+      "source": "readwise",
+      "repo": null,
+      "mappings": [
+        {
+          "task": "阅读库访问",
+          "layer": "tools",
+          "providers": [
+            "dsh-mcp"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "官方 MCP 已有；DSH 侧认证和工具调用尚未实测。"
+        },
+        {
+          "task": "跨资料整理",
+          "layer": "knowledge",
+          "providers": [
+            "flowix",
+            "memory"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "不能把记忆持久化视为带来源的检索。"
+        },
+        {
+          "task": "研究成果输出",
+          "layer": "delivery",
+          "providers": [
+            "dsh-files",
+            "dsh-flow"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "引用核验、增量更新与重复材料处理仍需设计。"
+        }
+      ]
+    },
+    {
+      "id": "open-design",
+      "name": "Open Design",
+      "kind": "社区应用",
+      "category": "创作",
+      "pitch": "用编程 Agent 生成设计产物，并提供导出。",
+      "source": "design",
+      "repo": "nexu-io/open-design",
+      "mappings": [
+        {
+          "task": "设计执行引擎",
+          "layer": "runtime",
+          "providers": [
+            "design"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "作者宣称支持 DSH；需核验具体宿主版本。"
+        },
+        {
+          "task": "设计产物交付",
+          "layer": "delivery",
+          "providers": [
+            "design",
+            "dsh-files"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "不同导出格式的保真度与失败率未测。"
+        }
+      ]
+    },
+    {
+      "id": "flowix",
+      "name": "Flowix",
+      "kind": "社区应用",
+      "category": "知识",
+      "pitch": "结合笔记与 Agent 记忆的工作空间。",
+      "source": "flowix",
+      "repo": "text2future/flowix",
+      "mappings": [
+        {
+          "task": "笔记与上下文",
+          "layer": "knowledge",
+          "providers": [
+            "flowix"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "知识更新与引用准确性未测。"
+        },
+        {
+          "task": "内置 Agent",
+          "layer": "runtime",
+          "providers": [
+            "flowix"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "作者说明内置 DSH；版本兼容需验证。"
+        }
+      ]
+    },
+    {
+      "id": "video-studio",
+      "name": "DSH Video Studio",
+      "kind": "社区应用",
+      "category": "创作",
+      "pitch": "把视频生成、渲染、音频与质检脚本封装成工具。",
+      "source": "video",
+      "repo": "jonah791/dsh-video-studio",
+      "mappings": [
+        {
+          "task": "渲染与音频工具",
+          "layer": "creative",
+          "providers": [
+            "video"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "依赖未随仓库提供的本地资产，不能视为完整开箱即用产品。"
+        },
+        {
+          "task": "后台渲染",
+          "layer": "runtime",
+          "providers": [
+            "dsh-jobs",
+            "video"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "跨机器部署、取消与恢复需实测。"
+        }
+      ]
+    },
+    {
+      "id": "metafolder",
+      "name": "DSH Metafolder",
+      "kind": "社区应用",
+      "category": "创作",
+      "pitch": "为侧边栏工作空间添加可视化目录组织。",
+      "source": "folders",
+      "repo": "ManoloRemiddi/DSH-Metafolder-Plugin",
+      "mappings": [
+        {
+          "task": "可视化目录组织",
+          "layer": "creative",
+          "providers": [
+            "folders"
+          ],
+          "status": "部分对应 · 未实测",
+          "gap": "目录组织与拖拽不等于语义搜索或素材内容理解。"
+        }
+      ]
+    }
+  ],
+  "ideas": [
+    {
+      "id": "compat",
+      "title": "DSH 插件兼容体检",
+      "layer": "quality",
+      "priority": "优先做小实验",
+      "summary": "框架持续变，先帮插件作者知道哪里会坏。",
+      "why": "Agent / Inbox API 与会话格式有明确迁移；兼容性是有来源支撑的问题。",
+      "reuse": "复用官方运行时与插件接口，新增版本矩阵、最小回归任务和失败报告。",
+      "buyer": "维护多个插件的作者与内部 Agent 团队。",
+      "mvp": "选 5 个自愿参与的插件、2 个框架版本；输出安装、启动、核心任务的失败定位。",
+      "risk": "官方可能补齐；小作者未必愿付费，先验证节省的维护时间。",
+      "validation": "人工完成一轮迁移报告，请维护者确认是否减少排障，并验证付费意愿。",
+      "sources": [
+        "dsh-api",
+        "dsh-release",
+        "reddit-friction"
+      ],
+      "verdict": "研究推断，尚未验证需求"
+    },
+    {
+      "id": "shots",
+      "title": "创作者的镜头检索助手",
+      "layer": "creative",
+      "priority": "有条件验证",
+      "summary": "从现有视频里找对镜头，再交给已有创作工具。",
+      "why": "生成、目录与设计工具已有候选；差异可能在素材内容理解与创作意图检索。",
+      "reuse": "复用文件工具、后台任务及现有视频工具；补镜头索引、检索与候选审阅。",
+      "buyer": "有大量本地录屏或实拍素材的独立创作者。",
+      "mvp": "对一批授权视频返回带时间码的候选镜头与理由，可跳回原素材验证。",
+      "risk": "TapNow 已覆盖部分文件整理；索引成本与命中率可能抵消操作收益。",
+      "validation": "同一素材与查询，对比人工检索耗时、可用镜头比例和返工次数。",
+      "sources": [
+        "tapnow",
+        "video",
+        "folders"
+      ],
+      "verdict": "研究推断，未证明生态缺失"
+    },
+    {
+      "id": "research",
+      "title": "有引用的持续研究助手",
+      "layer": "knowledge",
+      "priority": "先验证工作流",
+      "summary": "把已有阅读库变成能复查、能更新的研究记录。",
+      "why": "Readwise 开放 MCP/CLI，DSH 有接入机制和社区记忆候选；下一步是证据更新。",
+      "reuse": "优先复用资料库和 MCP，新增来源版本、观点引用与过期提醒。",
+      "buyer": "持续追踪单一领域的研究者与内容作者。",
+      "mvp": "只跟踪一个问题和 20 个来源；每次更新明确哪些事实变了、哪些结论要重看。",
+      "risk": "现有阅读与笔记产品可能覆盖此需求；认证、引用准确率和维护负担待测。",
+      "validation": "连续两周用真实研究任务比较引用错误、漏更新与人工核查时间。",
+      "sources": [
+        "readwise",
+        "flowix",
+        "dsh-mcp"
+      ],
+      "verdict": "研究推断，复用比例未测"
+    }
+  ],
+  "events": [
+    {
+      "id": "dsh-files-015",
+      "date": "2026-09-10",
+      "type": "DSH",
+      "title": "文件输入与产物预览进一步补齐",
+      "summary": "v0.1.5-rc.1 扩展通用附件与侧边栏产物预览。",
+      "impact": "垂直产品可优先复用输入与预览面，专业素材交互仍需补充。",
+      "layers": [
+        "runtime",
+        "creative"
+      ],
+      "products": [
+        "tapnow",
+        "video-studio"
+      ],
+      "sources": [
+        "dsh-release"
+      ],
+      "status": "官方发布 · 影响为分析"
+    },
+    {
+      "id": "dsh-steer-015",
+      "date": "2026-09-10",
+      "type": "DSH",
+      "title": "子代理交互与消息控制更新",
+      "summary": "候选版本增加子代理消息管理，并调整 Agent Team 消息语义。",
+      "impact": "多任务产品需验证排队、插话与停止行为，再建立业务流程。",
+      "layers": [
+        "runtime",
+        "delivery"
+      ],
+      "products": [
+        "dify"
+      ],
+      "sources": [
+        "dsh-release"
+      ],
+      "status": "官方发布 · 未实测"
+    },
+    {
+      "id": "dsh-api-015",
+      "date": "2026-09-08",
+      "type": "DSH",
+      "title": "Agent / Inbox API 和会话格式迁移",
+      "summary": "alpha 版本移除旧接口并升级会话格式，插件调用方需要适配。",
+      "impact": "插件数量不代表当前版本可用；兼容体检可以先做小规模验证。",
+      "layers": [
+        "runtime",
+        "quality"
+      ],
+      "products": [],
+      "sources": [
+        "dsh-api"
+      ],
+      "status": "官方迁移说明"
+    },
+    {
+      "id": "tap-h3",
+      "date": "2026-09-02",
+      "type": "产品",
+      "title": "TapNow 接入 MiniMax H3 Max",
+      "summary": "官方日志增加偏向快速草稿的视频生成选项。",
+      "impact": "DSH 的视频工具封装不能直接视为同等模型接入与交互。",
+      "layers": [
+        "creative"
+      ],
+      "products": [
+        "tapnow",
+        "video-studio"
+      ],
+      "sources": [
+        "tapnow"
+      ],
+      "status": "厂商声明 · 未实测"
+    },
+    {
+      "id": "tap-files",
+      "date": "2026-08-27",
+      "type": "产品",
+      "title": "TapNow Agent 可整理授权文件夹",
+      "summary": "官方说明支持创建目录、移动与重命名，并提供动作确认与失败回滚。",
+      "impact": "DSH 目录插件只是一部分对应；需要补工作流级确认与恢复。",
+      "layers": [
+        "creative",
+        "delivery"
+      ],
+      "products": [
+        "tapnow",
+        "metafolder"
+      ],
+      "sources": [
+        "tapnow",
+        "folders"
+      ],
+      "status": "厂商声明 · 对应关系为推断"
+    },
+    {
+      "id": "dify-agent",
+      "date": "2026-08-27",
+      "type": "产品",
+      "title": "Dify 发布可独立复用的 New Agent",
+      "summary": "Agent 可独立维护并作为应用、API 或工作流资源复用。",
+      "impact": "DSH 编排层有基础接口；发布管理和团队交付仍要逐项比较。",
+      "layers": [
+        "runtime",
+        "delivery"
+      ],
+      "products": [
+        "dify"
+      ],
+      "sources": [
+        "dify",
+        "dsh-flow"
+      ],
+      "status": "官方发布 · 对应关系为推断"
+    },
+    {
+      "id": "paper-security",
+      "date": "2026-08-18",
+      "type": "研究",
+      "title": "研究者发布 DSH 间接提示注入评估",
+      "summary": "论文用受控执行与轨迹判定研究间接输入通道。",
+      "impact": "可以借鉴实验方法；不能把旧版本实验视为当前 DSH 的安全结论。",
+      "layers": [
+        "quality"
+      ],
+      "products": [],
+      "sources": [
+        "paper",
+        "dsh-guard"
+      ],
+      "status": "论文报告 · 本站未复现"
+    }
+  ],
+  "media": [
+    {
+      "id": "x-launch",
+      "channel": "X",
+      "title": "DeepSeek 发布 DSH 开发者预览",
+      "summary": "通过 Reddit 转引发现官方账号原帖。X 返回 403，正文与发布日期未独立核验。",
+      "date": null,
+      "observed_at": "2026-09-10",
+      "layers": [
+        "runtime"
+      ],
+      "sources": [
+        "x-launch",
+        "reddit-launch"
+      ],
+      "status": "转引线索 · 原帖待核验"
+    },
+    {
+      "id": "plugin-friction",
+      "channel": "Reddit",
+      "title": "插件化承诺与实际使用之间的距离",
+      "summary": "一位用户分享对 DSH 插件组合体验的反馈；这是一条访谈线索，不代表普遍故障率。",
+      "date": null,
+      "observed_at": "2026-09-10",
+      "layers": [
+        "delivery",
+        "quality"
+      ],
+      "sources": [
+        "reddit-friction"
+      ],
+      "status": "个人体验 · 日期待核验"
+    },
+    {
+      "id": "dify-blog",
+      "channel": "官方博客",
+      "title": "Dify 将 Agent 变成可复用资源",
+      "summary": "关注重点从单次运行走向维护与复用，可用于对照 DSH 产品化的交付层。",
+      "date": "2026-08-27",
+      "observed_at": "2026-09-10",
+      "layers": [
+        "delivery"
+      ],
+      "sources": [
+        "dify"
+      ],
+      "status": "官方发布"
+    },
+    {
+      "id": "research-aig",
+      "channel": "研究论文",
+      "title": "用受控任务审视 Harness 的边界",
+      "summary": "A.I.G 评估提供可参考的测试思路；本站尚未运行对应评测。",
+      "date": "2026-08-18",
+      "observed_at": "2026-09-10",
+      "layers": [
+        "quality"
+      ],
+      "sources": [
+        "paper"
+      ],
+      "status": "论文 · 未复现"
+    }
+  ]
+}

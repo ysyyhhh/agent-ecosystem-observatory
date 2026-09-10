@@ -93,6 +93,8 @@ def main():
     temporary.write_text(content, encoding='utf-8')
     temporary.replace(target)
     print(f"Collected {len(result['repositories'])} repositories; {len(result['errors'])} query errors")
+    from activity import update
+    update()
 
 if __name__ == '__main__':
     main()
