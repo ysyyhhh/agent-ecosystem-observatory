@@ -1,0 +1,17 @@
+{
+  "products": [
+    {"name":"Codex App","scope":"商业产品 · 编程与工作流","url":"https://developers.openai.com/codex/changelog/","note":"跟踪官方更新日志；桌面产品与开源 CLI 分开统计。","status":"待逐条审阅"},
+    {"name":"豆包工作","scope":"商业产品 · 办公","url":"https://www.doubao.com/work/","note":"关注文档、表格、演示文稿工作流；登录后能力需要人工验证。","status":"待核验"},
+    {"name":"TapNow","scope":"商业产品 · 创作","url":"https://docs.tapnow.ai/zh/docs/changelog","note":"官方日志已包含本地文件夹整理。视频素材方向需要验证语义检索与镜头筛选的差异，而非假设竞品没有素材管理。","status":"官方声明，未实测"},
+    {"name":"Claude Code","scope":"商业产品 · 编程","url":"https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md","note":"公开更新日志不等于产品全部开源；跟踪工作流变化。","status":"待逐条审阅"}
+  ],
+  "questions": [
+    {"title":"视频素材整理：还能省下哪些操作？","hypothesis":"语义找镜头、按创作意图筛选候选素材，可能形成可验证的垂直价值。","next":"用同一批授权视频，对比检索命中、人工介入次数和总耗时。","status":"待验证"},
+    {"title":"DSH 到底能复用多少基础能力？","hypothesis":"按具体产品拆解模块，确认安装、兼容与集成成本后再计算复用率。","next":"先选一个工作流；不给未测试模块记满分。","status":"待验证"}
+  ],
+  "benchmarks": [
+    {"id":"workflow","name":"工作流成功率","reason":"等待同任务、同数据、记录模型与环境的实测","value":null},
+    {"id":"redundancy","name":"能力重复率","reason":"等待语义聚类与人工审阅；仓库去重不等于能力去重","value":null},
+    {"id":"leverage","name":"DSH 有效复用率","reason":"等待具体产品模块与集成成本验证","value":null}
+  ]
+}
