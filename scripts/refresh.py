@@ -69,7 +69,8 @@ def collect(previous):
             state.update(status='已抓取，内容待审阅', sha256=digest,
                 changed=bool(before.get('sha256') and before['sha256'] != digest), last_success=now)
         except Exception:
-            state.update(status='抓取失败，需人工查看', last_success=prior_sources.get(p['url'], {}).get('last_success'))
+            before = prior_sources.get(p['url'], {})
+            state.update(status='抓取失败，需人工查看', last_success=before.get('last_success'), sha256=before.get('sha256'))
         sources.append(state)
     return dict(generated_at=now, query='topic:dsh-plugin', sample_limit=300,
         search_total=total, incomplete_results=incomplete, errors=errors,
