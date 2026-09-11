@@ -52,9 +52,17 @@ def collect(previous):
     if not records:
         raise RuntimeError('No usable data; previous snapshot preserved')
     research = json.loads((DATA / 'research.json').read_text(encoding='utf-8'))
+    monitored = {p['url']: p for p in research['products']}
+    intelligence_path = DATA / 'intelligence.json'
+    if intelligence_path.exists():
+        intelligence = json.loads(intelligence_path.read_text(encoding='utf-8'))
+        source_by_id = {s['id']: s for s in intelligence['sources']}
+        for product in intelligence['products']:
+            source = source_by_id[product['source']]
+            monitored[source['url']] = dict(name=product['name'], url=source['url'])
     prior_sources = {s['url']: s for s in previous.get('sources', [])}
     sources = []
-    for p in research['products']:
+    for p in monitored.values():
         state = dict(name=p['name'], url=p['url'], checked_at=now)
         try:
             req = urllib.request.Request(p['url'], headers={'User-Agent':'AgentEcosystemObservatory/0.1'})

@@ -30,10 +30,11 @@ DSH 是持续研究的中心。收录范围包括基于 DSH 的应用与插件�
 
 这份项目的产物是围绕 DSH 的研究快照与静态网站。浏览和基础采集无需运行 DSH 或插件，也不依赖 GPU；其他产品作为 DSH 生态的对照与机会线索收录。
 
-网站以洞察为首页，提供四个入口：
+网站以洞察为首页，提供五个入口：
 
 - 总览：DSH 变化、六层能力缺口、三个带反方和验证步骤的产品 Idea。
-- 产品拆解：首批八个商业 / 社区产品，逐项映射到 DSH 模块或社区候选，附来源与缺口。
+- 生态图：同图展示产品体系、产品、能力层与 DSH 官方 / 社区候选；支持分类、形态、搜索、节点聚焦、缩放、拖动、键盘选择与来源详情。
+- 产品拆解：当前 17 个产品（12 个闭源服务、1 个混合形态、4 个 DSH 社区应用），逐项映射到 DSH 模块或社区候选，附来源与缺口。
 - 全局 Log：已审阅的 DSH / 产品更新与媒体线索，可按能力层过滤；另有自动采集的 release / commit 原始记录。
 - 应用榜：已收录的四个 DSH 社区应用按 Star 或最近推送排序。排除归档与 Fork；不是全生态榜，也不是质量榜。仓库搜索作为折叠辅助目录保留。
 
@@ -103,3 +104,14 @@ git push origin main
 [Star History](https://www.star-history.com/#ysyyhhh/agent-ecosystem-observatory&Date) · [贡献者](https://github.com/ysyyhhh/agent-ecosystem-observatory/graphs/contributors) · [提交活动](https://github.com/ysyyhhh/agent-ecosystem-observatory/activity) · [Fork 网络](https://github.com/ysyyhhh/agent-ecosystem-observatory/network/members)
 
 Star 和提交活动只反映项目关注与维护情况，不作为 DSH 能力或产品质量评分。
+
+
+## 2026-09-11 更新
+
+新增 Cursor、Lovable、Replit Agent、Notion AI、Canva AI、Runway、Gamma、Zapier Agents 和 Manus 的官方来源与能力对照。分类覆盖编程开发、应用构建、办公协作、知识研究、设计演示、视频创作、业务自动化、通用助手、素材管理。
+
+[打开交互生态图](https://ysyyhhh.github.io/agent-ecosystem-observatory/#ecosystem)。图直接从 `intelligence.json` 的产品与 mapping 生成，不维护第二份脱节的节点数据。实线是本站的产品体系归组；虚线是有记录的能力对应，不代表技术采用、真实集成、等价或投资关系。选中产品后，仅高亮它的具体映射路径；未知候选保留为空，在详情说明缺口。
+
+闭源形态针对所观察的产品服务，不代表其模型、开源工具或依赖全部闭源。旧条目保留原核查日期；本轮新增研究与真实厂商发布在 Log 中分别标注。累计仓库条目含历史样本，本次未重新观察到的条目不能作为今日新发布。
+
+图形浏览器测试：`node tests/graph.cjs`，环境变量与 `tests/browser.cjs` 相同。

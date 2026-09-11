@@ -1,7 +1,15 @@
 {
-  "checked_at": "2026-09-10T14:39:03.986252+00:00",
+  "checked_at": "2026-09-11T14:39:43.548714+00:00",
   "errors": [],
   "releases": [
+    {
+      "id": "386391166",
+      "title": "v0.1.5-rc.2",
+      "tag": "dsh-v0.1.5-rc.2",
+      "date": "2026-09-10T15:09:34Z",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-rc.2",
+      "prerelease": true
+    },
     {
       "id": "385978363",
       "title": "v0.1.5-rc.1",
@@ -67,7 +75,7 @@
       "prerelease": true
     }
   ],
-  "releases_observed_at": "2026-09-10T14:39:03.986252+00:00",
+  "releases_observed_at": "2026-09-11T14:39:43.548714+00:00",
   "commits": [
     {
       "id": "c291e7961a515f6d7af9304e7fd1d257929aef26",
@@ -160,5 +168,5 @@
       "url": "https://github.com/deepseek-ai/deepseek-harness/commit/69005cb9563b83729020b1bbe9f73084b34cdd3c"
     }
   ],
-  "commits_observed_at": "2026-09-10T14:39:03.986252+00:00"
+  "commits_observed_at": "2026-09-11T14:39:43.548714+00:00"
 }

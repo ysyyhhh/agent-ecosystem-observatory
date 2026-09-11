@@ -20,7 +20,7 @@ async function main(){
     show(`<span class="label">${esc(x.priority)} · ${esc(x.verdict)}</span><h2 id="detail-title">${esc(x.title)}</h2><p>${esc(x.summary)}</p>${[['为什么是现在',x.why],['DSH 复用与新增工作',x.reuse],['谁可能需要',x.buyer],['最小可验证产品',x.mvp],['反方与风险',x.risk],['下一步如何验证',x.validation]].map(([t,v])=>`<h3>${t}</h3><p>${esc(v)}</p>`).join('')}${layerChips([x.layer])}${sourceAudit(x.sources)}`);
   }
   function openProduct(id){const x=productById.get(id);if(!x)return;
-    show(`<span class="label">${esc(x.kind)} · ${esc(x.category)}</span><h2 id="detail-title">${esc(x.name)}</h2><p>${esc(x.pitch)}</p>${refs([x.source])}<p class="impact">以下是本站依据公开文档做的能力拆分。DSH 对应项是候选，未做等价性或端到端测试。</p>${x.mappings.map(m=>`<article class="mapping-row"><strong>${esc(m.task)}</strong>${layerChips([m.layer])}<span class="subtle">${esc(m.status)}</span><div class="mapping-columns"><div><span class="fact-title">DSH / 社区候选</span>${m.providers.length?refs(m.providers):'<p>尚未核验对应实现</p>'}</div><div><span class="fact-title">仍需补齐或验证</span><p>${esc(m.gap)}</p></div></div></article>`).join('')}${sourceAudit([...new Set([x.source,...x.mappings.flatMap(m=>m.providers)])])}`);
+    show(`<span class="label">${esc(x.kind)} · ${esc(x.category)}</span><h2 id="detail-title">${esc(x.name)}</h2><p>${esc(x.pitch)}</p><p class="subtle">${esc(x.category)} · ${esc(x.ecosystem||'')} · 核查 ${date(x.reviewed_at||i.reviewed_at)}</p>${refs([x.source])}<p class="impact">以下是本站依据公开文档做的能力拆分。DSH 对应项是候选，未做等价性或端到端测试。</p>${x.mappings.map(m=>`<article class="mapping-row"><strong>${esc(m.task)}</strong>${layerChips([m.layer])}<span class="subtle">${esc(m.status)}</span><div class="mapping-columns"><div><span class="fact-title">DSH / 社区候选</span>${m.providers.length?refs(m.providers):'<p>尚未核验对应实现</p>'}</div><div><span class="fact-title">仍需补齐或验证</span><p>${esc(m.gap)}</p></div></div></article>`).join('')}${sourceAudit([...new Set([x.source,...x.mappings.flatMap(m=>m.providers)])])}`);
   }
   function openLayer(id){const x=layers.get(id);if(!x)return;const related=i.products.filter(p=>p.mappings.some(m=>m.layer===id));
     show(`<span class="label">${esc(x.state)} · 基于已审阅样本</span><h2 id="detail-title">${esc(x.name)}</h2><h3>已有实现</h3><p>${esc(x.description)}</p>${refs(x.sources)}<h3>缺口与不确定性</h3><p>${esc(x.gap)}</p><h3>机会判断</h3><p>${esc(x.opportunity)}</p><h3>相关产品拆解</h3>${productChips(related.map(p=>p.id))}<p><button class="plain" data-filter-layer="${esc(id)}">查看这一层的全部产品 →</button></p>${sourceAudit(x.sources)}`);
@@ -34,9 +34,9 @@ async function main(){
     if(b.dataset.product)openProduct(b.dataset.product);
     if(b.dataset.layer)openLayer(b.dataset.layer);
     if(b.dataset.event)openEvent(b.dataset.event);
-    if(b.dataset.filterLayer){dialog.close();productKind='all';$('product-layer').value=b.dataset.filterLayer;renderProducts();location.hash='products';}
+    if(b.dataset.filterLayer){dialog.close();productKind='all';$('product-category').value='all';$('product-layer').value=b.dataset.filterLayer;renderProducts();location.hash='products';}
   });
-  function route(){const name=location.hash.slice(1).split('/')[0];const view=['overview','products','log','rankings'].includes(name)?name:'overview';
+  function route(){const name=location.hash.slice(1).split('/')[0];const view=['overview','ecosystem','products','log','rankings'].includes(name)?name:'overview';
     document.querySelectorAll('.view').forEach(x=>x.hidden=x.id!==`view-${view}`);
     document.querySelectorAll('[data-view]').forEach(x=>{if(x.dataset.view===view)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current');});
     window.scrollTo(0,0);
@@ -45,21 +45,21 @@ async function main(){
   function segments(id,options,current,callback){$(id).innerHTML=options.map(([key,label])=>`<button data-value="${key}" aria-pressed="${key===current}">${label}</button>`).join('');$(id).onclick=e=>{const b=e.target.closest('button');if(b)callback(b.dataset.value);};}
   for(const id of ['product-layer','log-layer'])$(id).insertAdjacentHTML('beforeend',i.layers.map(x=>`<option value="${x.id}">${esc(x.name)}</option>`).join(''));
   const age=Math.max(0,Math.floor((Date.now()-Date.parse(s.generated_at))/86400000));
-  $('status').textContent=`研究审阅 ${date(i.reviewed_at)} · 数据 ${date(s.generated_at)}${age?'（'+age+' 天前）':''}`;
+  $('status').textContent=`内容更新 ${date(i.updated_at||i.reviewed_at)} · 数据 ${date(s.generated_at)}${age?'（'+age+' 天前）':''}`;
   $('headline').textContent=i.headline;$('thesis').textContent=i.thesis;$('headline-sources').innerHTML=refs(['dsh-release','dsh-api','tapnow']);
   const release=a.releases[0], core=s.repositories.find(x=>x.id==='deepseek-ai/deepseek-harness');
   const first=trend[0], last=trend.at(-1), delta=trend.length>1?last.stars-first.stars:null;
   $('core-pulse').innerHTML=`<div class="pulse-number">${esc(release?.title||'版本待采集')}</div><div class="pulse-caption">${release?date(release.date)+' 发布 · '+(release.prerelease?'预发布版本':'正式发布'):''}</div><p class="pulse-caption">${core?core.stars.toLocaleString()+' Stars · ':''}${delta===null?'单期快照，暂不计算增长':`${date(first.date)} 至 ${date(last.date)}：Star ${delta>=0?'+':''}${delta}`}</p>`;
-  $('release-track').innerHTML=[['通用附件与产物预览','功能补齐','dsh-files-015'],['子代理消息管理','交互更新','dsh-steer-015'],['Agent / Inbox 接口','需要适配','dsh-api-015']].map(([title,state,id])=>`<div class="release-step"><button class="plain" data-event="${id}">${title} ↗</button><span>${state}</span></div>`).join('');
+  $('release-track').innerHTML=i.events.filter(x=>x.type==='DSH').slice(0,3).map(x=>`<div class="release-step"><button class="plain" data-event="${x.id}">${esc(x.title)} ↗</button><span>${date(x.date)}</span></div>`).join('');
   $('ideas').innerHTML=i.ideas.map(x=>`<article class="idea"><span class="label">${esc(x.priority)}</span><h3>${esc(x.title)}</h3><p>${esc(x.summary)}</p><button class="plain" data-idea="${x.id}">看分析、反方与验证方法 →</button></article>`).join('');
   $('layers').innerHTML=i.layers.map(x=>`<button class="layer" data-layer="${x.id}"><span class="layer-top"><strong>${esc(x.name)}</strong><span class="layer-state">${esc(x.state)} ↗</span></span><p>${esc(x.gap)}</p></button>`).join('');
   const mini=x=>`<article class="mini-event"><span class="subtle">${esc(x.type||x.channel)} · ${x.date?date(x.date):'发布日期待核验'}</span><h3><button class="plain" data-event="${x.id}">${esc(x.title)}</button></h3><p>${esc(x.impact||x.summary)}</p></article>`;
   $('recent-log').innerHTML=i.events.slice(0,3).map(mini).join('');$('media-preview').innerHTML=i.media.slice(0,3).map(mini).join('');
-  function renderProducts(){segments('product-filters',[['all','全部产品'],['commercial','商业产品'],['community','社区应用']],productKind,v=>{productKind=v;renderProducts();});
+  function renderProducts(){segments('product-filters',[['all','全部产品'],['closed','闭源服务'],['hybrid','混合'],['community','社区应用']],productKind,v=>{productKind=v;renderProducts();});
     const layer=$('product-layer').value;
-    const list=i.products.filter(x=>(productKind==='all'||(productKind==='community'?x.kind==='社区应用':x.kind!=='社区应用'))&&(layer==='all'||x.mappings.some(m=>m.layer===layer)));
+    const list=i.products.filter(x=>(productKind==='all'||(productKind==='community'?x.openness==='open':x.openness===productKind))&&($('product-category').value==='all'||x.category===$('product-category').value)&&(layer==='all'||x.mappings.some(m=>m.layer===layer)));
     $('product-grid').innerHTML=list.map(x=>`<article class="product"><div class="product-title"><h3>${esc(x.name)}</h3><span class="label">${esc(x.kind)}</span></div><p>${esc(x.pitch)}</p><div class="mapping-hint">${[...new Set(x.mappings.map(m=>m.layer))].map(l=>`<span class="label">${esc(layers.get(l).name)}</span>`).join('')}</div><button data-product="${x.id}">拆解 ${x.mappings.length} 项能力 →</button>${refs([x.source])}</article>`).join('')||'<p class="empty">这一筛选下尚未收录产品。</p>';
-    $('product-count').textContent=`${list.length} 个产品 · 已审阅 ${date(i.reviewed_at)} · 不以团队规模作为收录门槛`;
+    $('product-count').textContent=`${list.length} 个产品 · 条目核查日期见详情 · 不以团队规模作为收录门槛`;
   }
   function renderLog(){segments('log-filters',[['all','全部'],['DSH','DSH 变化'],['产品','产品更新'],['media','媒体动态'],['研究','研究']],logKind,v=>{logKind=v;renderLog();});
     const layer=$('log-layer').value;
@@ -68,7 +68,7 @@ async function main(){
     $('log-list').innerHTML=list.map(x=>`<article class="log-event"><div class="log-date"><span>${x.date?date(x.date):'日期待核验'}</span><br><span>${esc(x.type)}</span></div><div><h3><button class="plain event-title" data-event="${x.id}">${esc(x.title)}</button></h3><p>${esc(x.summary)}</p>${x.impact?`<p class="impact">对应 DSH：${esc(x.impact)}</p>`:''}${layerChips(x.layers)}${productChips(x.products||[])}${refs(x.sources)}<span class="subtle">${esc(x.status)} · 收录 / 审阅 ${date(x.observed_at||i.reviewed_at)}</span></div></article>`).join('')||'<p class="empty">这个能力层暂时没有已审阅动态。</p>';
   }
   $('all-media').onclick=()=>{logKind='media';$('log-layer').value='all';renderLog();location.hash='log';};
-  $('product-layer').onchange=renderProducts;$('log-layer').onchange=renderLog;
+  $('product-category').onchange=renderProducts;$('product-layer').onchange=renderProducts;$('log-layer').onchange=renderLog;
   $('activity-status').textContent=`版本采集 ${date(a.releases_observed_at)} · commit 采集 ${date(a.commits_observed_at)} · 每次抓取最多 8 个版本与 15 条 commit，历史保留；不是完整提交统计。${a.errors.length?' 本次部分失败，旧记录保留。':''}`;
   $('raw-activity').innerHTML=[...a.releases.map(x=>({...x,kind:'版本'})),...a.commits.map(x=>({...x,kind:'commit'}))].sort((x,y)=>y.date.localeCompare(x.date)).map(x=>`<div class="raw-row"><a href="${link(x.url)}">${esc(x.kind)} · ${esc(x.title)} ↗</a><span>${date(x.date)} · 能力映射待审阅</span></div>`).join('');
   function renderRanks(){segments('rank-filters',[['stars','应用 Star 榜'],['updated','最近推送榜']],rankKind,v=>{rankKind=v;renderRanks();});
@@ -84,6 +84,8 @@ async function main(){
   $('search').oninput=()=>{repoPage=0;renderRepos();};$('prev').onclick=()=>{repoPage--;renderRepos();};$('next').onclick=()=>{repoPage++;renderRepos();};
   $('coverage').textContent=s.coverage+' 搜索匹配数 '+s.search_total+'；'+(s.errors.length?'部分采集失败，历史数据保留。':'不是全量普查。');
   $('benchmarks').innerHTML=r.benchmarks.map(x=>`<p>${esc(x.name)}：${x.value===null?'未评测':esc(x.value)} · ${esc(x.reason)}</p>`).join('');
+  $('product-category').insertAdjacentHTML('beforeend',[...new Set(i.products.map(p=>p.category))].sort().map(c=>`<option>${esc(c)}</option>`).join(''));
+  window.initEcosystemGraph(i,openProduct,openLayer,esc,link);
   renderProducts();renderLog();renderRanks();renderRepos();route();
 }
 main().catch(e=>{$('status').textContent='研究数据加载失败，请刷新重试或从 GitHub 查看 data 目录。';console.error(e);});

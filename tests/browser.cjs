@@ -15,7 +15,7 @@ const fs=require('node:fs');
  await page.locator('[data-idea="compat"]').click();await page.locator('dialog[open]').waitFor();
  assert.match(await page.locator('#detail-body').textContent(),/反方与风险/);
  await page.keyboard.press('Escape');assert.equal(await page.locator('dialog[open]').count(),0);
- await page.locator('nav a[href="#products"]').click();assert.equal(await page.locator('.product').count(),8);
+ await page.locator('nav a[href="#products"]').click();assert.equal(await page.locator('.product').count(),17);
  await page.locator('[data-product="tapnow"]').first().click();await page.locator('dialog[open]').waitFor();
  assert.equal(await page.locator('.mapping-row').count(),3);
  assert.ok(await page.locator('#detail-body a[href*="github.com"]').count()>0);

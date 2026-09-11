@@ -22,6 +22,8 @@ def validate_intelligence(data):
             assert set(item.get('products', [])) <= products
             assert not item.get('layer') or item['layer'] in layers
     for product in data['products']:
+        assert product['openness'] in {'open','closed','hybrid'}, 'Invalid product scope'
+        assert product['category'] and product['ecosystem'], 'Products need graph classification'
         assert product['source'] in sources
         assert product['mappings'], 'Every product needs a capability breakdown'
         for row in product['mappings']:

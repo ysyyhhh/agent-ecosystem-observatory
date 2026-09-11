@@ -200,6 +200,96 @@
       "published_at": "2026-08-18",
       "checked_at": "2026-09-10",
       "access": "已阅读公开来源"
+    },
+    {
+      "id": "cursor",
+      "title": "Cursor 官方产品说明",
+      "url": "https://cursor.com/docs",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "lovable",
+      "title": "Lovable 官方产品说明",
+      "url": "https://docs.lovable.dev/introduction/welcome",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "replit",
+      "title": "Replit Agent 官方产品说明",
+      "url": "https://replit.com/products/agent",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "notion",
+      "title": "Notion AI 官方产品说明",
+      "url": "https://www.notion.com/product/ai",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "canva",
+      "title": "Canva AI 官方产品说明",
+      "url": "https://www.canva.com/canva-ai/",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "runway",
+      "title": "Runway 官方产品说明",
+      "url": "https://runway.com/product",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "gamma",
+      "title": "Gamma 官方产品说明",
+      "url": "https://gamma.app/",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "zapier",
+      "title": "Zapier Agents 官方产品说明",
+      "url": "https://zapier.com/agents",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "manus",
+      "title": "Manus 官方产品说明",
+      "url": "https://manus.im/",
+      "type": "官方文档",
+      "published_at": null,
+      "checked_at": "2026-09-11",
+      "access": "已阅读公开来源；产品效果未实测"
+    },
+    {
+      "id": "dsh-rc2",
+      "title": "DSH v0.1.5-rc.2",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.5-rc.2",
+      "type": "官方发布",
+      "published_at": "2026-09-10",
+      "checked_at": "2026-09-11",
+      "access": "已阅读官方发布说明"
     }
   ],
   "layers": [
@@ -288,7 +378,7 @@
       "id": "tapnow",
       "name": "TapNow",
       "kind": "商业产品",
-      "category": "创作",
+      "category": "视频创作",
       "pitch": "用 Agent 和画布组织多媒体创作。",
       "source": "tapnow",
       "repo": null,
@@ -322,13 +412,16 @@
           "status": "部分对应 · 未实测",
           "gap": "Open Design 是相关候选，不代表节点画布或视频时间线等价。"
         }
-      ]
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "closed",
+      "ecosystem": "TapNow"
     },
     {
       "id": "dify",
       "name": "Dify",
       "kind": "商业 / 源码可用",
-      "category": "工作流",
+      "category": "业务自动化",
       "pitch": "把 Agent、知识和业务流程作为可复用应用。",
       "source": "dify",
       "repo": null,
@@ -361,13 +454,16 @@
           "status": "部分对应 · 未实测",
           "gap": "Guard 不等同于业务审批界面、观测和团队治理。"
         }
-      ]
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "hybrid",
+      "ecosystem": "Dify"
     },
     {
       "id": "tana",
       "name": "Tana",
       "kind": "商业产品",
-      "category": "办公",
+      "category": "办公协作",
       "pitch": "把会议内容转成结构化结果和后续行动。",
       "source": "tana",
       "repo": null,
@@ -401,13 +497,16 @@
           "status": "部分对应 · 未实测",
           "gap": "待接入具体任务系统，确认回写、去重和失败恢复。"
         }
-      ]
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "closed",
+      "ecosystem": "Tana"
     },
     {
       "id": "readwise",
       "name": "Readwise Reader",
       "kind": "商业产品",
-      "category": "知识",
+      "category": "知识研究",
       "pitch": "通过官方 MCP / CLI 将阅读资料交给 Agent。",
       "source": "readwise",
       "repo": null,
@@ -441,13 +540,16 @@
           "status": "部分对应 · 未实测",
           "gap": "引用核验、增量更新与重复材料处理仍需设计。"
         }
-      ]
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "closed",
+      "ecosystem": "Readwise Reader"
     },
     {
       "id": "open-design",
       "name": "Open Design",
       "kind": "社区应用",
-      "category": "创作",
+      "category": "设计演示",
       "pitch": "用编程 Agent 生成设计产物，并提供导出。",
       "source": "design",
       "repo": "nexu-io/open-design",
@@ -471,13 +573,16 @@
           "status": "部分对应 · 未实测",
           "gap": "不同导出格式的保真度与失败率未测。"
         }
-      ]
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "open",
+      "ecosystem": "DSH 社区"
     },
     {
       "id": "flowix",
       "name": "Flowix",
       "kind": "社区应用",
-      "category": "知识",
+      "category": "知识研究",
       "pitch": "结合笔记与 Agent 记忆的工作空间。",
       "source": "flowix",
       "repo": "text2future/flowix",
@@ -500,13 +605,16 @@
           "status": "部分对应 · 未实测",
           "gap": "作者说明内置 DSH；版本兼容需验证。"
         }
-      ]
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "open",
+      "ecosystem": "DSH 社区"
     },
     {
       "id": "video-studio",
       "name": "DSH Video Studio",
       "kind": "社区应用",
-      "category": "创作",
+      "category": "视频创作",
       "pitch": "把视频生成、渲染、音频与质检脚本封装成工具。",
       "source": "video",
       "repo": "jonah791/dsh-video-studio",
@@ -530,13 +638,16 @@
           "status": "部分对应 · 未实测",
           "gap": "跨机器部署、取消与恢复需实测。"
         }
-      ]
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "open",
+      "ecosystem": "DSH 社区"
     },
     {
       "id": "metafolder",
       "name": "DSH Metafolder",
       "kind": "社区应用",
-      "category": "创作",
+      "category": "素材管理",
       "pitch": "为侧边栏工作空间添加可视化目录组织。",
       "source": "folders",
       "repo": "ManoloRemiddi/DSH-Metafolder-Plugin",
@@ -549,6 +660,303 @@
           ],
           "status": "部分对应 · 未实测",
           "gap": "目录组织与拖拽不等于语义搜索或素材内容理解。"
+        }
+      ],
+      "reviewed_at": "2026-09-10",
+      "openness": "open",
+      "ecosystem": "DSH 社区"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "编程开发",
+      "ecosystem": "Cursor",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "cursor",
+      "repo": null,
+      "pitch": "理解代码、修改功能和审查变更。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "代码理解与修改",
+          "layer": "runtime",
+          "providers": [
+            "dsh-flow",
+            "dsh-files"
+          ],
+          "gap": "编辑器上下文、索引和模型表现需同任务验证。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "工具扩展与团队工作流",
+          "layer": "tools",
+          "providers": [
+            "dsh-mcp"
+          ],
+          "gap": "支持 MCP 不等于所有 Cursor 集成都能直接复用。",
+          "status": "部分对应 · 未实测"
+        }
+      ]
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "category": "应用构建",
+      "ecosystem": "Lovable",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "lovable",
+      "repo": null,
+      "pitch": "通过自然语言构建、迭代与部署 Web 应用。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "自然语言构建应用",
+          "layer": "runtime",
+          "providers": [
+            "dsh-flow",
+            "dsh-files"
+          ],
+          "gap": "DSH 执行底座不包含完整应用生成与预览体验。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "应用发布与治理",
+          "layer": "delivery",
+          "providers": [],
+          "gap": "托管、数据库、权限和发布回滚需独立实现或接入。",
+          "status": "未核验对应实现"
+        }
+      ]
+    },
+    {
+      "id": "replit",
+      "name": "Replit Agent",
+      "category": "应用构建",
+      "ecosystem": "Replit",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "replit",
+      "repo": null,
+      "pitch": "在托管开发环境中通过对话构建应用。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "应用开发任务",
+          "layer": "runtime",
+          "providers": [
+            "dsh-flow",
+            "dsh-jobs"
+          ],
+          "gap": "需比较项目搭建、依赖处理和错误恢复。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "开发环境与交付",
+          "layer": "delivery",
+          "providers": [],
+          "gap": "DSH 本地运行不等同于云端环境与应用托管。",
+          "status": "未核验对应实现"
+        }
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion AI",
+      "category": "办公协作",
+      "ecosystem": "Notion",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "notion",
+      "repo": null,
+      "pitch": "在工作空间内使用 AI 处理知识和工作任务。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "工作空间知识访问",
+          "layer": "knowledge",
+          "providers": [
+            "flowix",
+            "memory"
+          ],
+          "gap": "访问权限、实时同步和准确引用仍需验证。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "工作空间任务执行",
+          "layer": "tools",
+          "providers": [
+            "dsh-mcp",
+            "dsh-flow"
+          ],
+          "gap": "需具体连接器与授权，不能把通用工具协议视为完成集成。",
+          "status": "部分对应 · 未实测"
+        }
+      ]
+    },
+    {
+      "id": "canva",
+      "name": "Canva AI",
+      "category": "设计演示",
+      "ecosystem": "Canva",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "canva",
+      "repo": null,
+      "pitch": "在设计工作空间中使用 AI 生成与编辑内容。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "设计生成与编辑",
+          "layer": "creative",
+          "providers": [
+            "design"
+          ],
+          "gap": "模板、品牌资产和可编辑结构的覆盖未验证。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "设计产物交付",
+          "layer": "delivery",
+          "providers": [
+            "design",
+            "dsh-files"
+          ],
+          "gap": "导出保真度、团队协作与版式一致性需实测。",
+          "status": "部分对应 · 未实测"
+        }
+      ]
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "category": "视频创作",
+      "ecosystem": "Runway",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "runway",
+      "repo": null,
+      "pitch": "面向图像和视频生成的创作产品。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "图像与视频生成",
+          "layer": "creative",
+          "providers": [
+            "video"
+          ],
+          "gap": "候选插件只提供工具封装，不代表可复用 Runway 模型。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "创作任务执行",
+          "layer": "runtime",
+          "providers": [
+            "dsh-jobs"
+          ],
+          "gap": "队列只是底座，模型接入、预览和版本管理仍需构建。",
+          "status": "部分对应 · 未实测"
+        }
+      ]
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "category": "设计演示",
+      "ecosystem": "Gamma",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "gamma",
+      "repo": null,
+      "pitch": "用 AI 制作演示、文档和网站。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "演示内容与布局",
+          "layer": "creative",
+          "providers": [
+            "design"
+          ],
+          "gap": "内容结构、模板与自动排版质量需验证。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "分享与交付",
+          "layer": "delivery",
+          "providers": [
+            "design",
+            "dsh-files"
+          ],
+          "gap": "文件导出不等于在线分享、协作和网站托管。",
+          "status": "部分对应 · 未实测"
+        }
+      ]
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier Agents",
+      "category": "业务自动化",
+      "ecosystem": "Zapier",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "zapier",
+      "repo": null,
+      "pitch": "通过应用连接和 Agent 执行业务任务。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "业务应用连接",
+          "layer": "tools",
+          "providers": [
+            "dsh-mcp"
+          ],
+          "gap": "连接器目录、授权维护与数据约束需要逐个核验。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "自动化执行",
+          "layer": "delivery",
+          "providers": [
+            "automation",
+            "dsh-flow"
+          ],
+          "gap": "触发、幂等、人工确认和失败恢复需要工作流级测试。",
+          "status": "部分对应 · 未实测"
+        }
+      ]
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "category": "通用助手",
+      "ecosystem": "Manus",
+      "kind": "闭源服务",
+      "openness": "closed",
+      "source": "manus",
+      "repo": null,
+      "pitch": "提供网站构建、演示与设计等任务入口。",
+      "reviewed_at": "2026-09-11",
+      "mappings": [
+        {
+          "task": "网站与演示任务",
+          "layer": "delivery",
+          "providers": [
+            "design",
+            "dsh-flow"
+          ],
+          "gap": "候选只能覆盖部分原语；多步任务结果与交付质量未测。",
+          "status": "部分对应 · 未实测"
+        },
+        {
+          "task": "任务执行与文件产物",
+          "layer": "runtime",
+          "providers": [
+            "dsh-jobs",
+            "dsh-files"
+          ],
+          "gap": "运行环境、长任务可靠性与权限体验需验证。",
+          "status": "部分对应 · 未实测"
         }
       ]
     }
@@ -613,6 +1021,62 @@
     }
   ],
   "events": [
+    {
+      "id": "coverage-20260911",
+      "date": "2026-09-11",
+      "type": "研究",
+      "title": "新增九个闭源产品的能力对照",
+      "summary": "扩展编程、应用构建、办公、设计、视频与自动化样本；这是本站研究更新，不是厂商今日发布。",
+      "impact": "通用执行与文件能力有候选，托管交付、业务连接与专业交互仍需逐项验证。",
+      "layers": [
+        "runtime",
+        "tools",
+        "delivery"
+      ],
+      "products": [
+        "cursor",
+        "lovable",
+        "replit",
+        "notion",
+        "canva",
+        "runway",
+        "gamma",
+        "zapier",
+        "manus"
+      ],
+      "sources": [
+        "cursor",
+        "lovable",
+        "replit",
+        "notion",
+        "canva",
+        "runway",
+        "gamma",
+        "zapier",
+        "manus"
+      ],
+      "status": "本站收录更新 · 映射未实测",
+      "observed_at": "2026-09-11"
+    },
+    {
+      "id": "dsh-rc2",
+      "date": "2026-09-10",
+      "type": "DSH",
+      "title": "rc.2：反馈确认与交付卡片优化",
+      "summary": "反馈提交增加确认和失败内容保留，文件交付卡片与对话间距继续调整。",
+      "impact": "这次主要是交互打磨，不应计作新的独立能力；已有交付面可以复用，但仍需验证专业工作流。",
+      "layers": [
+        "delivery"
+      ],
+      "products": [
+        "open-design"
+      ],
+      "sources": [
+        "dsh-rc2"
+      ],
+      "status": "官方发布 · 本站未实测",
+      "observed_at": "2026-09-11"
+    },
     {
       "id": "dsh-files-015",
       "date": "2026-09-10",
@@ -810,5 +1274,6 @@
       ],
       "status": "论文 · 未复现"
     }
-  ]
+  ],
+  "updated_at": "2026-09-11"
 }
